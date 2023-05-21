@@ -1,0 +1,49 @@
+import random
+while True :
+    choices = ["rock","paper","scissor"]
+    # computer choice selection 
+    computer=random.choice(choices)
+    player=None
+    # player choice selection
+        
+    while player not in choices:
+        player=input("rock,paper,scissor :- ").lower()    #used lower to get all the input in Lowercase
+    if player==computer:                                  #setting the winning goals by using nested if statements
+        print("Player :-",player)
+        print("Computer :-",computer)   
+        print("Tie!!!")
+    elif player=="paper":
+        if computer=="scissor":
+            print("Player :-",player)
+            print("Computer :-",computer)   
+            print("You Lose!")
+        if computer=="rock":
+            print("Player :-",player)
+            print("Computer :-",computer)   
+            print("You Won!")
+    elif player=="rock":
+        if computer=="scissor":
+            print("Player :-",player)
+            print("Computer :-",computer)   
+            print("You lose!")
+        if computer=="paper":
+            print("Player :-",player)
+            print("Computer :-",computer)   
+            print("You Won!")
+    elif player=="scissor":
+        if computer=="paper":
+            print("Player :-",player)
+            print("Computer :-",computer)   
+            print("You Lose!")
+        if computer=="rock":
+            print("Player :-",player)
+            print("Computer :-",computer)   
+            print("You Won!")
+                    
+                
+                        
+    play_again=input("Play again? (yes/no)").lower()  #asking the player to play another game or not
+    if play_again != "yes":
+        break                                         #if the gives other than yes as input it break the program
+        
+print ("Welcome Again")
